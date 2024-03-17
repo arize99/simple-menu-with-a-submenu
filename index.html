@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<style>
+
+a hover{
+font-weight: bold;
+}
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative; /* Added */
+}
+
+
+
+.submenu {
+    position: relative; /* Changed to relative */
+}
+
+.sub-submenu {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    width: 200px;
+    left: 100%; /* Position the sub-submenu to the right of the submenu */
+    top: 50%; /* Align the top of sub-submenu with the top of submenu */
+}
+
+
+
+
+.submenu,
+.sub-submenu {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none; /* Changed */
+	width: 80px; /* Adjust width as needed */
+}
+
+.submenu li {
+    display: block;
+	width: 100%;
+}
+
+.sub-submenu li {
+    display: block;
+	width: 100%;
+}
+
+.submenu li:hover, .sub-submenu li:hover {
+    font-weight: bold;
+}
+
+
+/*.submenu li:hover{
+	font-weight: bold;
+}
+.sub-submenu li:hover {
+    background-color: #f2f2f2;
+	font-weight: bold;
+}
+*/
+.menu li:hover > .submenu,
+.submenu li:hover > .sub-submenu {
+    display: block; /* Changed */
+}
+</style>
+</head>
+<body>
+
+<ul class="menu">
+    <li><a href="#">title 1</a></li>
+    <li>
+        <a href="#">title 2</a>
+        <ul class="submenu">
+            <li><a href="#">sub menu 1</a></li>
+            <li><a href="#">sub menu 2</a></li>
+            <li>
+                <a href="#">sub menu 3</a>
+                <ul class="sub-submenu">
+                    <li><a href="#">submenu 1</a></li>
+                    <li><a href="#">submenu 2</a></li>
+                    <li><a href="#">submenu 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#">title 3</a></li>
+    <li><a href="#">title 4</a></li>
+    <li><a href="#">title 5</a></li>
+    <li><a href="#">title 6</a></li>
+    <li><a href="#">title 7</a></li>
+</ul>
+
+</body>
+</html>
